@@ -24,7 +24,7 @@ class StoreOcorrencia extends FormRequest
     public function rules()
     {
         return [
-            'ocorrencia' => 'required|unique|min:5|max:10',
+            'ocorrencia' => 'required|unique:ocorrencias|min:5|max:10',
             'oficio' => 'required|min:5|max:10',
             'perito' => 'required|min:5|max:10',
             'entrada' => 'required|date'

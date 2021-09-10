@@ -40,10 +40,21 @@
         </div>
         <div class="form-group">
           <label >Perito</label>
+          <select class="form-control" @error('perito') is-invalid @enderror" name="perito" id="perito" value="teste  ">
+            @error('perito')
+              <div class="error invalid-feedback">{{ $message }}</div>
+            @enderror
+            <option value="" selected disabled hidden>Selecionar Perito...</option>
+            @foreach ($user ?? '' as $item)
+              <option>{{$item->name}}</option>
+            @endforeach
+          </select>
+          <!--
           <input type="text" class="form-control @error('perito') is-invalid @enderror" name="perito" id="perito" placeholder="Perito">
           @error('perito')
-          <div class="error invalid-feedback">{{ $message }}</div>
+            <div class="error invalid-feedback">{{ $message }}</div>
           @enderror
+          -->
         </div>
         <div class="form-group">
           <label >Entrada</label>
