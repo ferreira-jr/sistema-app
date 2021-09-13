@@ -54,8 +54,8 @@
                     <td>{{$item->ocorrencia}}</td>
                     <td>{{$item->oficio}}</td>
                     <td><span class="tag tag-success">{{$item->perito}}</span></td>
-                    <td><a class="btn btn-info   "><i class="fas fa-edit"></i></a></td>
-                    <td><a class="btn btn-warning  "><i class="fas fa-eye"></i></i></a></td>
+                    <td><a href="" class="btn btn-info   "><i class="fas fa-edit"></i></a></td>
+                    <td><a href="{{route('ocorrencia.show', $item->id)}}" class="btn btn-warning  "><i class="fas fa-eye"></i></i></a></td>
                     <td><a class="btn btn-danger  "><i class="fas fa-trash-alt"></i></i></a></td>
                   </tr>
                 @endforeach             

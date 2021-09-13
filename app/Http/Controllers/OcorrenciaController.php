@@ -53,9 +53,14 @@ class OcorrenciaController extends Controller
      * @param  \App\Models\Ocorrencia  $ocorrencia
      * @return \Illuminate\Http\Response
      */
-    public function show(Ocorrencia $ocorrencia)
+    public function show($id)
     {
         //
+        $ocorrencia = Ocorrencia::find($id);
+        if (!$ocorrencia) {
+            return redirect()->route('ocorrencia.index');
+        }
+        return view('admin.pages.ocorrencia.show', compact('ocorrencia'));
     }
 
     /**

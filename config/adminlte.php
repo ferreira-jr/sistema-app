@@ -247,6 +247,11 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'        => 'Home',
+            'url'         => 'home',
+            'icon'        => 'fas fa-home',
+        ],
+        [
             'text'        => 'Ocorrências',
             'url'         => 'admin/ocorrencia',
             'icon'        => 'fas fa-clipboard-list',

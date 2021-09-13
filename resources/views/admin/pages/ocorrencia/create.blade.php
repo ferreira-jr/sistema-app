@@ -58,7 +58,7 @@
         </div>
         <div class="form-group">
           <label >Entrada</label>
-          <input type="text" class="form-control @error('entrada') is-invalid @enderror" name="entrada" id="entrada" placeholder="Entrada">
+          <input type="date" class="form-control @error('entrada') is-invalid @enderror" name="entrada" id="entrada" placeholder="Entrada">
           @error('entrada')
           <div class="error invalid-feedback">{{ $message }}</div>
           @enderror

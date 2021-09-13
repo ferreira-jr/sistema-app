@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ocorrencia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,10 @@ class HomeController extends Controller
     public function index()
     {
         $ocorrencia = Ocorrencia::get();
-
-        return view('home',['ocorrencia'=> $ocorrencia]);
+        $abertas = DB::table('ocorrencias')->where('status', '=', 'Aberto')->get();
+        $andamento = DB::table('ocorrencias')->where('status', '=', 'Andamento')->get();
+        $finalizado = DB::table('ocorrencias')->where('status', '=', 'Finalizado')->get();
+        return view('home', compact('ocorrencia', 'abertas', 'andamento', 'finalizado'));
     }
+    
 }

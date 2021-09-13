@@ -26,3 +26,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/admin/ocorrencia',[OcorrenciaController::class, 'index' ])->name('ocorrencia.index');
 Route::get('/admin/ocorrencia/create',[OcorrenciaController::class, 'create'])->name('ocorrencia.create');
 Route::post('admin/ocorrencia/store', [OcorrenciaController::class,'store'])->name('ocorrencia.store');
+Route::get('/admin/ocorrencia/{id}',[OcorrenciaController::class, 'show'])->name('ocorrencia.show');
