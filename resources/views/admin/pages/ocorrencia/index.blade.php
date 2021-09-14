@@ -40,7 +40,6 @@
           <table class="table table-hover text-nowrap">
             <thead>
               <tr>
-                <th style="width: 10% ">ID</th>
                 <th style="width: 30% ">Ocorrência</th>
                 <th style="width: 30% ">Ofício</th>
                 <th style="width: 30% " >Perito</th>
@@ -50,7 +49,6 @@
             <tbody>
                 @foreach ($ocorrencia ?? '' as $item)
                 <tr>
-                    <td>{{$item->id}}</td>
                     <td>{{$item->ocorrencia}}</td>
                     <td>{{$item->oficio}}</td>
                     <td><span class="tag tag-success">{{$item->perito}}</span></td>

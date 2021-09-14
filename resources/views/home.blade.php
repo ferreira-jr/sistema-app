@@ -86,8 +86,8 @@
               <td>{{$item->ocorrencia}}</td>
               <td>{{$item->oficio}}</td>
               <td>{{$item->perito}}</td>
-              <td>{{$item->entrada}}</td>
-              <td>{{number_format($item->dias, 0)}}</td>
+              <td>{{date('d/m/Y', strtotime($item->entrada));}}</td>
+              <td>{{$datahoje->diffInDays($item->entrada)}}</td>
               @if ($item->status == "Aberto")
                 <td><span class="badge bg-success">{{$item->status}}</span></td>
               @elseif($item->status == "Andamento")

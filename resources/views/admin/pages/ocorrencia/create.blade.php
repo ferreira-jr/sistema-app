@@ -15,9 +15,9 @@
 @stop
 
 @section('content')
-  <div class="card card-primary">
-    <div class="card-header">
-      <h3 class="card-title">Nova Ocorrência</h3>
+  <div class="card card-primary" >
+    <div class="card-header" >
+      <h3 class="card-title"><Strong>Nova Ocorrência</Strong></h3>
     </div>
     <!-- /.card-header -->
     <!-- form start -->
